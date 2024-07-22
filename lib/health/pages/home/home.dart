@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 40,
+            height: 20,
           ),
           RowsTitle(title: "Feature"),
           SizedBox(
@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
           ),
           IndicatorPageview(),
           SizedBox(
-            height: 40,
+            height: 20,
           ),
           RowsTitle(title: "Exercise"),
           SizedBox(
