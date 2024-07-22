@@ -27,7 +27,7 @@ int index = 0;
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Badge(
-              child: Icon(Icons.doorbell_outlined)),
+              child: Icon(Icons.notifications_none_outlined)),
           ),
         ],
       ),
