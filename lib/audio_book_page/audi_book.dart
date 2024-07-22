@@ -2,6 +2,7 @@ import 'package:exam_str_c11/audio_book_page/pages/home.dart';
 import 'package:exam_str_c11/audio_book_page/pages/libaray.dart';
 import 'package:exam_str_c11/audio_book_page/pages/search.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AudiBook extends StatefulWidget {
   static const String routeName = "book";
@@ -39,35 +40,37 @@ int index = 0;
               ),
               bottomNavigationBar:BottomNavigationBar(
                   type: BottomNavigationBarType.fixed,
+                  selectedLabelStyle: GoogleFonts.poppins(
+                    fontSize: 10,
+                    color: Color(0xff6A6A8B)
+                  ),
+                  unselectedItemColor: Color(0xff6A6A8B),
+                  selectedItemColor: Color(0xff4838D1),
+                  iconSize: 30,
+                  
                   currentIndex: index,
                   onTap: (value) {
                     index = value;
                     setState(() {});
                   },
-                  showUnselectedLabels: false,
-                  showSelectedLabels: false,
-                  unselectedItemColor: Colors.black,
+
                   items: [
                     BottomNavigationBarItem(
-                      icon: ImageIcon(
-                        AssetImage("assets/images/Icon.png"),
-                        size: 40,
-                      ),
-                      label: "",
+                      icon: Icon(Icons.home_filled,size: 30,),
+                      label: "Home",
                     ),
                     BottomNavigationBarItem(
                       icon: ImageIcon(
                         AssetImage("assets/images/search.png"),
-                        size: 40,
+                        size: 30,
                       ),
-                      label: "",
+                      label: "Search",
                     ),
                     BottomNavigationBarItem(
                       icon: ImageIcon(
                         AssetImage("assets/images/lib.png"),
-                        size: 40,
                       ),
-                      label: "",
+                      label: "Library",
                     ),
                   ]),
               body: page[index]
