@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 20,
+
           ),
           RowsTitle(title: "Feature"),
           SizedBox(
