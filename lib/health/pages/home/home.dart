@@ -54,14 +54,29 @@ class HomeScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset("assets/images/love.png",),
-              Image.asset("assets/images/cool.png"),
-              Image.asset("assets/images/happy.png"),
-              Image.asset("assets/images/sad.png"),
+              InkWell(
+                overlayColor: WidgetStateColor.transparent,
+                onTap: () {},
+                child: Image.asset(
+                  "assets/images/love.png",
+                ),
+              ),
+              InkWell(
+                  overlayColor: WidgetStateColor.transparent,
+                  onTap: () {},
+                  child: Image.asset("assets/images/cool.png")),
+              InkWell(
+                  overlayColor: WidgetStateColor.transparent,
+                  onTap: () {},
+                  child: Image.asset("assets/images/happy.png")),
+              InkWell(
+                  overlayColor: WidgetStateColor.transparent,
+                  onTap: () {},
+                  child: Image.asset("assets/images/sad.png")),
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 25,
           ),
           RowsTitle(title: "Feature"),
           SizedBox(
@@ -69,11 +84,11 @@ class HomeScreen extends StatelessWidget {
           ),
           IndicatorPageview(),
           SizedBox(
-            height: 20,
+            height: 30,
           ),
           RowsTitle(title: "Exercise"),
           SizedBox(
-            height: 20,
+            height: 25,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
