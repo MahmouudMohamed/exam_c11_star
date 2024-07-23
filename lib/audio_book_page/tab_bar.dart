@@ -8,6 +8,7 @@ double width;
   @override
   Widget build(BuildContext context) {
     return Tab(
+
       child: Container(
         width: width,
         alignment: Alignment.center,
