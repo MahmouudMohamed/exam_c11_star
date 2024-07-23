@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:exam_str_c11/health/pages/home/home.dart';
 import 'package:exam_str_c11/health/pages/profile.dart';
 import 'package:exam_str_c11/health/pages/test1.dart';
@@ -14,7 +16,7 @@ class MoodyHealth extends StatefulWidget {
 }
 
 class _MoodyHealthState extends State<MoodyHealth> {
-int index = 0;
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +29,19 @@ int index = 0;
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Badge(
-              child: Icon(Icons.notifications_none_outlined)),
+              child: Icon(
+                Icons.notifications_none_outlined,
+                size: 30,
+              ),
+              smallSize: 12,
+              backgroundColor: Color(0xffF04438),
+            ),
           ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          showSelectedLabels: false,
+          iconSize: 40,
           currentIndex: index,
           onTap: (value) {
             index = value;
@@ -41,32 +49,40 @@ int index = 0;
           },
           showUnselectedLabels: false,
           selectedItemColor: Color(0xff027A48),
-          items:[
-            BottomNavigationBarItem(icon: Icon(Icons.home_filled,size: 30,),label: ""),
-            BottomNavigationBarItem(icon: ImageIcon(
-              AssetImage(
-                "assets/images/2.png",),
-              size: 40,
-            ), label: ""),
-            BottomNavigationBarItem(icon: ImageIcon(
-              AssetImage(
-                "assets/images/3.png",),
-              size: 40,
-            ), label: ""),
-            BottomNavigationBarItem(icon: ImageIcon(
-              AssetImage(
-                "assets/images/4.png",),
-              size: 40,
-            ), label: ""),
-
-          ]
-      ),
-
-      body:pages[index] ,
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home_filled,
+                  size: 30,
+                ),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage(
+                    "assets/images/2.png",
+                  ),
+                ),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage(
+                    "assets/images/3.png",
+                  ),
+                ),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage(
+                    "assets/images/4.png",
+                  ),
+                ),
+                label: ""),
+          ]),
+      body: pages[index],
     );
   }
 
-  List<Widget>pages=[
+  List<Widget> pages = [
     HomeScreen(),
     Test1Screen(),
     Test2Screen(),
