@@ -5,7 +5,6 @@ import 'package:exam_str_c11/audio_book_page/tab_bar.dart';
 import 'package:exam_str_c11/audio_book_page/view_best_seller.dart';
 import 'package:exam_str_c11/audio_book_page/view_recommended.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -24,6 +23,7 @@ class Home extends StatelessWidget {
             Column(
               children: [
                 TabBar(
+                  overlayColor: WidgetStateColor.transparent,
                     isScrollable: true,
                     labelPadding: EdgeInsetsDirectional.only(end: 25),
                     tabAlignment: TabAlignment.start,
