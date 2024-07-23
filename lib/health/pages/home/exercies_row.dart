@@ -10,26 +10,30 @@ int colorLogo;
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-          height: 50,
-          decoration: BoxDecoration(
-              color: Color(color),
-              borderRadius: BorderRadius.circular(10)),
-          child: Row(
-            children: [
-              SizedBox(
-                width: 15,
-              ),
-              ImageIcon(
-                AssetImage("assets/images/$logo.png"),
-                color: Color(colorLogo),//0xffB692F6
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              Text(name),
-            ],
-          )),
+      child: InkWell(
+        overlayColor: WidgetStateColor.transparent,
+        onTap: () {},
+        child: Container(
+            height: 50,
+            decoration: BoxDecoration(
+                color: Color(color),
+                borderRadius: BorderRadius.circular(10)),
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 15,
+                ),
+                ImageIcon(
+                  AssetImage("assets/images/$logo.png"),
+                  color: Color(colorLogo),//0xffB692F6
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Text(name),
+              ],
+            )),
+      ),
     );
   }
 }
