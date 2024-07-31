@@ -23,6 +23,7 @@ class _MoodyHealthState extends State<MoodyHealth> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        scrolledUnderElevation: 0,
         titleSpacing: 30,
         title: Image.asset("assets/images/logoh.png"),
         actions: [
@@ -78,7 +79,7 @@ class _MoodyHealthState extends State<MoodyHealth> {
                 ),
                 label: ""),
           ]),
-      body: pages[index],
+      body: SingleChildScrollView(child: pages[index]),
     );
   }
 

@@ -4,6 +4,8 @@ import 'package:exam_str_c11/audio_book_page/pages/search.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../health/pages/home/moody_health_main.dart';
+
 class AudiBook extends StatefulWidget {
   static const String routeName = "book";
 
@@ -16,8 +18,6 @@ class AudiBook extends StatefulWidget {
 class _AudiBookState extends State<AudiBook> {
   PageController controller = PageController(viewportFraction: 0.6);
 
-  List<String> tabs = ["Art", "Business", "Comedy", "Drama"];
-
 int index = 0;
 
   @override
@@ -27,11 +27,14 @@ int index = 0;
             length: 4,
             child: Scaffold(
               appBar: AppBar(
+                scrolledUnderElevation: 0,
                 elevation: 0,
                 title: Image.asset("assets/images/Logo.png"),
                 actions: [
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, MoodyHealth.routeName);
+                      },
                       icon: Icon(
                         Icons.settings_outlined,
                         color: Color(0Xff4838D1),
