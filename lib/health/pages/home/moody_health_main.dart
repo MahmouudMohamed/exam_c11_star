@@ -24,7 +24,6 @@ class _MoodyHealthState extends State<MoodyHealth> {
       appBar: AppBar(
         elevation: 0,
         scrolledUnderElevation: 0,
-        titleSpacing: 30,
         title: Image.asset("assets/images/logoh.png"),
         actions: [
           Padding(
